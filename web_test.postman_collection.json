@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "7451caa8-426d-4453-ac23-4c3c198247ed",
+		"name": "Products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://web-test.test/api/products.php",
+					"protocol": "https",
+					"host": [
+						"web-test",
+						"test"
+					],
+					"path": [
+						"api",
+						"products.php"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://web-test.test/api/products.php",
+							"protocol": "https",
+							"host": [
+								"web-test",
+								"test"
+							],
+							"path": [
+								"api",
+								"products.php"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Jul 2021 13:35:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.8"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": \"1\",\n            \"name\": \"HELLO\",\n            \"price\": \"600.00\",\n            \"quantity\": \"2\",\n            \"description\": \"description\",\n            \"created\": \"2021-07-04 13:35:19\"\n        },\n        {\n            \"id\": \"2\",\n            \"name\": \"HELLO\",\n            \"price\": \"6000.00\",\n            \"quantity\": \"1\",\n            \"description\": \"description\",\n            \"created\": \"2021-07-04 13:35:23\"\n        }\n    ],\n    \"itemCount\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "HELLO",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "description",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "600",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://web-test.test/api/products.php",
+					"protocol": "https",
+					"host": [
+						"web-test",
+						"test"
+					],
+					"path": [
+						"api",
+						"products.php"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "HELLO",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "description",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "6000",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://web-test.test/api/products.php",
+							"protocol": "https",
+							"host": [
+								"web-test",
+								"test"
+							],
+							"path": [
+								"api",
+								"products.php"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.17.8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 04 Jul 2021 13:37:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.8"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"successfully create products\"\n}"
+				}
+			]
+		}
+	]
+}
